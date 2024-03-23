@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
+.index-content {
+    margin: 0px;
+    font-family: 'Roboto';
+    text-align: center;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  .typing-text {
+    overflow: hidden; /* ซ่อนเนื้อหาที่ยังไม่แสดง */
+    border-right: .15em solid orange; /* ตัวอักษรลำดับถัดไป */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+    margin: 0 auto; /* กำหนดให้ข้อความอยู่กลางแนวนอน */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  /* สร้าง animation เส้นที่ใช้เป็น cursor */
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+  }
+  
+
+.labelainput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2%;
+    margin-top: 5%;
+    padding-bottom: 5%;
+
+}
+
+.labelainput> form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: calc(100% - 50px);
+
+}
+
+.labelainput form label {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.labelainput form input[type="text"],
+.labelainput form input[type="number"],
+.labelainput form select {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.labelainput form input[type="text"]:focus,
+.labelainput form input[type="number"]:focus,
+.labelainput form select:focus {
+    border-color: #007bff;
+}
+
+.labelainput form select {
+    width: 100%;
+    text-align: left;
+}
+
+.labelainput form select option {
+    padding: 10px;
+}
+
+.custom-btn {
+    margin: 20px;
+    text-align: center;
+}
+
+h4 {
+    padding-bottom: 5%;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-15 {
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+}
+
+.btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+
+.btn-15:hover {
+    color: #fff;
+}
+
+.btn-15:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.btn-15:active {
+    top: 2px;
+}
+

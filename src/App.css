@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 20s ease infinite;
+	height: 100vh;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.App{
+  margin-top: 2%;
+  text-align: center;
+}
+.header-text{
+  color: rgb(0, 0, 0);
+}
+.content {
+  padding-top: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(121, 121, 121, 0.5); /* ใส่เงาดำ */
+  padding-top: 3%;
+  background-color: #ffffff;
+
+}
+.index-content{
+  margin-top: 2%;
+}
+
+.container {
+  text-align: center;
+}
+
+.animated-text {
+  padding-top: 15px;
+  display: inline-block;
+  animation: slide-in 5s ease infinite;
+  color: #fbc608;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-45px);
+    transition: 1s;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transition: 1s;
+
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.logo {
+  width: 70px; /* กำหนดความกว้างของโลโก้ */
+  height: auto; /* กำหนดความสูงของโลโก้ให้ปรับอัตโนมัติตามอัตราส่วนของรูปภาพ */
+  position: absolute; /* กำหนดตำแหน่งที่ไม่อิงกับส่วนอื่นของหน้าเว็บ */
+  top: 25px; /* กำหนดตำแหน่งด้านบน */
+  left: 25px; /* กำหนดตำแหน่งด้านซ้าย */
+}
+

@@ -1,0 +1,314 @@
+.show-content {
+    position: relative; /* ต้องกำหนด position เป็น relative เพื่อให้การกำหนดตำแหน่งเป็นไปตามหลักแหล่งของตัวเอง */
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+ 
+  .show-co {
+    z-index: 90 ;
+    position: absolute; 
+    top: -250px; 
+    left: 50%; /* กำหนดให้อยู่ที่ตำแหน่งกึ่งกลางของแนวแกน x */
+    transform: translate(-50%, -50%); /* ใช้ transform เพื่อย้ายตำแหน่ง element ไปที่กลาง */
+    padding: 50px; /* กำหนด padding สำหรับระยะห่างของข้อความในตัว element */
+    background-color: #174a35; /* กำหนดสีพื้นหลัง */
+    border-radius: 10px; /* กำหนดรูปร่างของมุม */
+    opacity: 0; /* เริ่มต้นให้ opacity เป็น 0 เพื่อซ่อน element */
+    animation: fadeIn 1s forwards; /* เพิ่ม animation fadeIn เพื่อทำให้ element แสดงผลด้วย opacity เป็น 1 */
+    box-shadow: 0 0 5px rgba(121, 121, 121, 0.5); /* ใส่เงาดำ */
+  }
+  .retop{
+    margin-bottom: 15px;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* เริ่มต้นที่ opacity เป็น 0 */
+    }
+    to {
+      opacity: 1; /* สิ้นสุดที่ opacity เป็น 1 */
+    }
+  }
+  h2{
+    color: #ffffff;
+  }
+  
+  .button {
+    background-color: lightcoral;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 5em;
+    border-radius: 1rem;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   .button:active {
+    color: lightcoral;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   .button:hover:not(:disabled) {
+    background: white;
+    color: lightcoral;
+    text-shadow: 0 0.1rem #bcb4b4;
+   }
+   
+   .button:disabled {
+    cursor: auto;
+    color: grey;
+   }
+
+   .btns {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 5em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   .btns:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   .btns:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+   }
+   
+   .btns:disabled {
+    cursor: auto;
+    color: grey;
+   }
+
+   .buttonshow {
+    font-family: inherit;
+    font-size: 20px;
+    background: #212121;
+    color: white;
+    fill: rgb(155, 153, 153);
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    font-weight: 1000;
+  }
+  
+  .buttonshow span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  table thead th {
+    font-size: 15px; /* กำหนดขนาดตัวอักษรของ thead เป็น 18px */
+    font-weight: bold;
+  }
+  .buttonshow svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .buttonshow:hover {
+    background: #000;
+    color: #007bff;
+  }
+  
+  .buttonshow:hover .svg-wrapper {
+    transform: scale(1.25);
+    transition: 0.5s linear;
+    color: #007bff;
+  }
+  
+  .buttonshow:hover svg {
+    transform: translateX(1.2em) scale(1.1);
+    fill: #fff;
+    color: #007bff;
+  }
+  
+  .buttonshow:hover span {
+    transition: 0.5s linear;
+    color: #007bff;
+  }
+  
+  .buttonshow:active {
+    transform: scale(0.95);
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  /* Input container */
+.input-container {
+    position: relative;
+    margin: 20px;
+  }
+  
+  /* Input field */
+  .input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+  }
+  
+  /* Input label */
+  .input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input highlight */
+  .input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input field:focus styles */
+  .input-field:focus + .input-label {
+    top: -20px;
+    font-size: 12px;
+    color: #007bff;
+  }
+  
+  .input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+  }
+
+.closebtn{
+  width: 100px;
+  height: 25px;
+  background: #4FC3A1;
+  border: 0;
+  cursor: pointer;
+  border-radius: 15px;
+  color:white;
+}
+.closebtn:hover{
+  transition: 0.7s;
+  background: #324960;
+  color: #f6ff00;
+  width: 110px;
+}
+.closebtn::before{
+  transition: 0.7s;
+  width: 110px;
+  height: 35px;
+}
+.closebtn::after{
+  transition: 0.7s;
+  width: 110px;
+  height: 35px;
+}
+.closebtn:active{
+  transition: 0.7s;
+  background: #324960;
+  color: #f6ff00;
+  width: 110px;
+}
+
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+/* follow me template */
+.made-with-love {
+  margin-top: 40px;
+  padding: 10px;
+  clear: left;
+  text-align: center;
+  font-size: 10px;
+  font-family: arial;
+  color: #fff;
+}
+.made-with-love i {
+  font-style: normal;
+  color: #F50057;
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.made-with-love a {
+  color: #fff;
+  text-decoration: none;
+}
+.made-with-love a:hover {
+  text-decoration: underline;
+}
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+} 
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+.btsa button {
+  margin-right: 15px; /* กำหนดระยะห่างของปุ่มด้านขวา */
+  
+}
+.input-container .aaa{
+  margin-right: 15px;
+}
